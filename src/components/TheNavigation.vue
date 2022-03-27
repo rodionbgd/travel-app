@@ -15,4 +15,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+#nav .active-link {
+  color: #00fffe;
+}
+</style>
