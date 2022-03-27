@@ -1,1 +1,0 @@
-import{_ as a}from"./index.36f9d079.js";import{o as e,c as o,d as c}from"./vendor.850061ea.js";const s={name:"MyJamaica"},t={class:"jamaica"},r=c("h1",null,"Jamaica",-1),n=[r];function _(i,m,d,p,f,l){return e(),o("div",t,n)}var $=a(s,[["render",_]]);export{$ as default};
