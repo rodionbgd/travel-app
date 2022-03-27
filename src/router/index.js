@@ -39,8 +39,10 @@ const routes = [
   },
 ];
 
+const path = process.env.NODE_ENV === "production" ? "/travel-app/" : "./";
+
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(path),
   routes,
 });
 
