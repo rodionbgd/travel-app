@@ -39,7 +39,8 @@ const routes = [
   },
 ];
 
-const path = process.env.NODE_ENV === "production" ? "/travel-app/" : "./";
+export const path =
+  process.env.NODE_ENV === "production" ? "/travel-app/" : "/";
 
 const router = createRouter({
   history: createWebHistory(path),

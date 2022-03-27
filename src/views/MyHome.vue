@@ -10,7 +10,10 @@
         <h2>
           {{ destination.name }}
         </h2>
-        <img :src="`/images/${destination.image}`" :alt="destination.slug" />
+        <img
+          :src="`${publicPath}images/${destination.image}`"
+          :alt="destination.slug"
+        />
       </router-link>
     </div>
   </div>
@@ -18,6 +21,7 @@
 
 <script>
 import sourceData from "@/data.json";
+import { path } from "@/router";
 
 export default {
   name: "MyHome",
@@ -25,6 +29,7 @@ export default {
   data() {
     return {
       destinations: sourceData.destinations,
+      publicPath: path,
     };
   },
 };
