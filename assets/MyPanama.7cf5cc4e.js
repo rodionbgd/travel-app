@@ -1,0 +1,1 @@
+import{_ as a}from"./index.36f9d079.js";import{o as e,c as o,d as s}from"./vendor.850061ea.js";const t={name:"MyPanama"},n={class:"panama"},c=s("h1",null,"Panama",-1),r=[c];function _(m,d,p,i,f,l){return e(),o("div",n,r)}var $=a(t,[["render",_]]);export{$ as default};

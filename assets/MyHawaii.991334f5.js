@@ -1,1 +1,0 @@
-import{_ as a}from"./index.ceecf0ea.js";import{o as e,c as o,d as s}from"./vendor.850061ea.js";const t={name:"MyHawaii"},c={class:"hawaii"},i=s("h1",null,"Hawaii",-1),r=[i];function n(_,d,p,f,l,m){return e(),o("div",c,r)}var w=a(t,[["render",n]]);export{w as default};

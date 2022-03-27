@@ -1,1 +1,0 @@
-import{_ as e}from"./index.ceecf0ea.js";import{o,c as s,d as t}from"./vendor.850061ea.js";const a={name:"MyBrazil"},r={class:"brazil"},c=t("h1",null,"Brazil",-1),n=[c];function _(i,l,d,p,f,m){return o(),s("div",r,n)}var u=e(a,[["render",_]]);export{u as default};
