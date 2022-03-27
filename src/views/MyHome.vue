@@ -2,19 +2,11 @@
   <div class="home">
     <h1>All destinations</h1>
     <div class="destinations">
-      <router-link
-        v-for="destination in destinations"
-        :key="destination.id"
-        :to="{ name: 'destination.show', params: { id: destination.id } }"
-      >
-        <h2>
-          {{ destination.name }}
-        </h2>
-        <img
-          :src="`${publicPath}images/${destination.image}`"
-          :alt="destination.slug"
-        />
-      </router-link>
+      <navigation-base>
+        <template #dest="{ image, slug }">
+          <img :src="`${publicPath}images/${image}`" :alt="slug" />
+        </template>
+      </navigation-base>
     </div>
   </div>
 </template>
@@ -22,17 +14,19 @@
 <script>
 import sourceData from "@/data.json";
 import { path } from "@/router";
+import NavigationBase from "@/components/NavigationBase.vue";
 
 export default {
   name: "MyHome",
-
+  components: {
+    NavigationBase,
+  },
   data() {
     return {
       destinations: sourceData.destinations,
       publicPath: path,
+      counter: 0,
     };
   },
 };
 </script>
-
-<style scoped></style>

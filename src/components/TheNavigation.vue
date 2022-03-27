@@ -1,21 +1,27 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link>
-    <router-link to="/brazil">Brazil</router-link>
-    <router-link to="/hawaii">Hawaii</router-link>
-    <router-link to="/jamaica">Jamaica</router-link>
-    <router-link to="/panama">Panama</router-link>
-    <router-link to="/about">About</router-link>
+    <router-link id="logo" to="/">
+      <img
+        src="https://img.icons8.com/external-wanicon-flat-wanicon/64/000000/external-palm-tropical-wanicon-flat-wanicon.png"
+        alt=""
+      />
+    </router-link>
+    <NavigationBase />
   </div>
 </template>
 
 <script>
+import NavigationBase from "@/components/NavigationBase.vue";
+
 export default {
   name: "TheNavigation",
+  components: {
+    NavigationBase,
+  },
 };
 </script>
 
-<style scoped>
+<style>
 #nav .active-link {
   color: #00fffe;
 }
