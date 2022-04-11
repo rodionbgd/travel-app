@@ -10,7 +10,14 @@ const routes = [
     meta: {
       requiresAuth: true,
     },
-    props: true,
+  },
+  {
+    path: "/invoices",
+    name: "invoices",
+    component: () => import("@/views/TheInvoices.vue"),
+    meta: {
+      requiresAuth: true,
+    },
   },
   {
     path: "/login",
@@ -66,7 +73,6 @@ const router = createRouter({
   routes,
   linkActiveClass: "active-link",
   scrollBehavior(to, from, savedPosition) {
-    console.log(to.name);
     return (
       savedPosition ||
       (to.name !== "experience.show" &&
@@ -79,7 +85,7 @@ const router = createRouter({
 
 router.beforeEach((to) => {
   if (to.meta?.requiresAuth && !window.user) {
-    return { name: "login" };
+    return { name: "login", query: { redirect: to.fullPath } };
   }
 });
 export default router;
