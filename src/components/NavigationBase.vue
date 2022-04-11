@@ -1,5 +1,5 @@
 <template>
-  <router-link
+  <app-link
     v-for="destination in destinations"
     :key="destination.id"
     :to="{
@@ -11,7 +11,7 @@
       {{ destination.name }}
     </h2>
     <slot name="dest" v-bind="destination"></slot>
-  </router-link>
+  </app-link>
 </template>
 
 <script>

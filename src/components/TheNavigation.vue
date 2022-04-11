@@ -1,15 +1,18 @@
 <template>
   <div id="nav">
-    <router-link id="logo" to="/">
+    <app-link id="logo" to="/">
       <img
         src="https://img.icons8.com/external-wanicon-flat-wanicon/64/000000/external-palm-tropical-wanicon-flat-wanicon.png"
         alt=""
       />
-    </router-link>
+    </app-link>
     <NavigationBase />
-    <router-link :to="{ name: 'protected' }">
+    <app-link :to="{ name: 'protected' }">
       <h2>Dashboard</h2>
-    </router-link>
+    </app-link>
+    <app-link to="https://github.com/">
+      <h2>Github</h2>
+    </app-link>
   </div>
 </template>
 
