@@ -1,1 +1,0 @@
-import{_ as e}from"./index.6b673d1c.js";import{r as t,o as n,c as r,f as s,w as a,d as c,q as _}from"./vendor.dda8c65c.js";const d={name:"NotFound"},u=c("h1",null,"Not found",-1),l=_("not found");function f(i,p,m,N,h,x){const o=t("router-link");return n(),r("div",null,[u,s(o,{to:"/"},{default:a(()=>[l]),_:1})])}var v=e(d,[["render",f]]);export{v as default};
