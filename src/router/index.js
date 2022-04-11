@@ -6,7 +6,10 @@ const routes = [
   {
     path: "/protected",
     name: "protected",
-    component: () => import("@/views/TheProtected.vue"),
+    components: {
+      default: () => import("@/views/TheProtected.vue"),
+      LeftSidebar: () => import("@/components/LeftSidebar.vue"),
+    },
     meta: {
       requiresAuth: true,
     },
@@ -14,7 +17,10 @@ const routes = [
   {
     path: "/invoices",
     name: "invoices",
-    component: () => import("@/views/TheInvoices.vue"),
+    components: {
+      default: () => import("@/views/TheInvoices.vue"),
+      LeftSidebar: () => import("@/components/LeftSidebar.vue"),
+    },
     meta: {
       requiresAuth: true,
     },
