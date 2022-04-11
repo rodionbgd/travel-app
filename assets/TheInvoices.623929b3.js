@@ -1,1 +1,0 @@
-import{p as o,o as s,c as n,d as r}from"./vendor.5704c094.js";import{_ as t}from"./index.91b6c3c7.js";const a={name:"TheInvoices",setup(){o(()=>{if(!window.confirm("Are you sure?"))return!1})}},c=r("h1",null,"Invoices",-1),i=[c];function _(e,f,p,u,d,l){return s(),n("div",null,i)}var v=t(a,[["render",_]]);export{v as default};
