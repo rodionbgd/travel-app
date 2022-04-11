@@ -4,6 +4,20 @@ import sourceData from "@/data.json";
 
 const routes = [
   {
+    path: "/protected",
+    name: "protected",
+    component: () => import("@/views/TheProtected.vue"),
+    meta: {
+      requiresAuth: true,
+    },
+    props: true,
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: () => import("@/views/TheLogin.vue"),
+  },
+  {
     path: "/",
     name: "Home",
     component: Home,
@@ -52,13 +66,20 @@ const router = createRouter({
   routes,
   linkActiveClass: "active-link",
   scrollBehavior(to, from, savedPosition) {
+    console.log(to.name);
     return (
       savedPosition ||
-      new Promise((resolve) =>
-        setTimeout(() => resolve({ top: 0, behavior: "smooth" }), 300)
-      )
+      (to.name !== "experience.show" &&
+        new Promise((resolve) =>
+          setTimeout(() => resolve({ top: 0, behavior: "smooth" }), 300)
+        ))
     );
   },
 });
 
+router.beforeEach((to) => {
+  if (to.meta?.requiresAuth && !window.user) {
+    return { name: "login" };
+  }
+});
 export default router;

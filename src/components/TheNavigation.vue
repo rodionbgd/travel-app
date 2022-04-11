@@ -7,6 +7,9 @@
       />
     </router-link>
     <NavigationBase />
+    <router-link :to="{ name: 'protected' }">
+      <h2>Dashboard</h2>
+    </router-link>
   </div>
 </template>
 

@@ -1,9 +1,9 @@
 <template>
   <TheNavigation />
   <div class="container">
-    <router-view v-slot="{ Component }">
+    <router-view v-slot="{ Component, route }">
       <transition name="fade" mode="out-in">
-        <component :is="Component" :key="$route.path"></component>
+        <component :is="Component" :key="route.path"></component>
       </transition>
     </router-view>
   </div>
